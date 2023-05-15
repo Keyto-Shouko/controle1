@@ -4,6 +4,7 @@ let installButton = document.getElementById("installMe")
 let notifButton = document.getElementById("sendNotif")
 let pwaInfo = document.getElementById("pwaInfo")
 let allowNotifButton = document.getElementById("allowNotif")
+let arrowToInstallButton = document.getElementById("arrowToInstallButton")
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -11,6 +12,8 @@ window.addEventListener('beforeinstallprompt', (e) => {
   deferredPrompt = e;
 });
 
+//make a yellow arrow that would point to the icon to install a PWA
+//if the user is on a mobile device
 //add an event to installButton to prompt for user to install the PWA
 installButton.addEventListener("click", async (e) => {
   console.log("install button clicked")
